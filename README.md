@@ -79,8 +79,9 @@ sonar.sources=./src/
 sonar.testExecutionReportPaths=./reports/test-reporter.xml
 sonar.javascript.lcov.reportPaths=./coverage/lcov.info
 ```
-sonar.testExecutionReportPath will not work
-sonar.testExecutionReportPaths will work
+note:
+- sonar.testExecutionReportPath will not work (You could spend days and hours scratching your head if you miss this)
+- sonar.testExecutionReportPaths will work
 
 # complete !
 
