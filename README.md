@@ -1,4 +1,5 @@
-# How to set up sonar
+# How to set up sonar to work with jest
+
 ## pre-requisites:
 - node & npm
 - java
@@ -18,8 +19,8 @@ go to java dir and duplicate client/ as server/
 localhost:9000
 
 ## login:
-user: admin
-pwd: admin
+- user: admin
+- pwd: admin
 
 ## add token
 experiment
@@ -49,10 +50,11 @@ sonar.javascript.lcov.reportPaths=./coverage/lcov.info
 ```
 
 ## add this project now into a git repo, otherwise sonarqube scanner will give blame error messages and may not work
+```
 $ git init
 $ git add .
 $ git commit -m"my updated sonar-project.properties file and other stuff"
-
+```
 ## run npm dependencies
 $ npm install
 
@@ -67,3 +69,5 @@ localhost:9000
 make sure you can see visible unit tests and coverage with a percentage greater than zero.
 
 # complete !
+
+For instructions - look at bare minimum package.json file
