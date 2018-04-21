@@ -1,0 +1,29 @@
+{
+  "name": "sonar",
+  "version": "1.0.0",
+  "description": "https://www.sonarqube.org/downloads/\r sonarqub3 7.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "node runtests.js --ci && sonar-scanner",
+    "sonar-scanner": "node node_modules/sonar-scanner/bin/sonar-scanner"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^22.4.3",
+    "jest-sonar-reporter": "^2.0.0"
+  },
+  "jest": {
+    "testResultsProcessor": "jest-sonar-reporter"
+  },
+  "jestSonar": {
+    "reportPath": "reports",
+    "reportFile": "test-reporter.xml",
+    "indent": 4,
+    "sonar56x": true
+  },
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "sonar-scanner": "^3.1.0"
+  }
+}

@@ -1,0 +1,5 @@
+sonar-scanner-3.1.0.1141-windows
+node_modules
+coverage
+reports
+sonarqube-7.1
