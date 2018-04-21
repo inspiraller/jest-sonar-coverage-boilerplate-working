@@ -70,6 +70,18 @@ note: it will depend on your sonar-project.properties to work
 localhost:9000
 make sure you can see visible unit tests and coverage with a percentage greater than zero.
 
+## troubleshoot coverage not showing anything?
+- make sure you have spelt sonar-project.properties paths exactly correct.
+One letter out and it won't tell give useful debug error messages.
+```
+sonar.tests=./specs/
+sonar.sources=./src/
+sonar.testExecutionReportPaths=./reports/test-reporter.xml
+sonar.javascript.lcov.reportPaths=./coverage/lcov.info
+```
+sonar.testExecutionReportPath will not work
+sonar.testExecutionReportPaths will work
+
 # complete !
 
 For instructions - look at bare minimum package.json file
