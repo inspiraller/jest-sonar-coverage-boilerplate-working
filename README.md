@@ -1,17 +1,13 @@
 # How to set up sonar
 
-## download server
+## Download sonarqube server
 https://www.sonarqube.org/downloads/
 sonarqub3 7.1
 
-## download scanner
-https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner
-windows 64 bit
-
-## run server
+## Run server - as administrator via cmder or powershell or git bash
 C:\baps\sonar\sonarqube-7.1\bin\windows-x86-32\StartSonar.bat
 
-### troubleshoot cant find server/
+### Troubleshoot cant find server/
 go to java dir and duplicate client/ as server/
 
 ## open window browser
@@ -31,38 +27,39 @@ experiment
 ## add project
 experiment
 
-## copy generated command line
+## copy properties needed from command line
 ```
 sonar-scanner.bat -Dsonar.projectKey=experiment -Dsonar.sources=. -Dsonar.host.url=http://localhost:9000 -Dsonar.login=b31e38900133da2fabf9d06861cca8965ce1ee6b
 ```
+## create sonar-project.properties local to your project:
+```
+sonar.projectKey=experiment
+sonar.host.url=http://localhost:9000
+sonar.login=b31e38900133da2fabf9d06861cca8965ce1ee6b
+sonar.projectName=experiment
 
-## note: to change destination of project for sonar to test - update
-```
--Dsonar.projectBaseDir=../../somepathorAbsoluteToProject
-```
-
-## create sonar-project.properties file
-sonar-project.properties
+sonar.tests=./specs/
+sonar.sources=./src/
+sonar.testExecutionReportPaths=./reports/test-reporter.xml
+sonar.javascript.lcov.reportPaths=./coverage/lcov.info
 ```
 
-```
+## add this project now into a git repo, otherwise sonarqube scanner will give blame error messages and may not work
+$ git init
+$ git add .
+$ git commit -m"my updated sonar-project.properties file and other stuff"
+
+## run npm dependencies
+$ npm install
+
+## run tests  
+$ npm run test
 
 # Allow firewall and antivirus to let sonar-scanner run
 note: it will depend on your sonar-project.properties to work
 
-# troubleshoot errors running jest or sonar - ensure you have bound this to version control = ie git
+## open sonarqube server in browser
+localhost:9000
+make sure you can see visible unit tests and coverage with a percentage greater than zero.
 
-# make sure sonarqube server is running
-C:\baps\sonar\sonarqube-7.1\bin\windows-x86-32\StartSonar.bat and run terminal as administrator
-
-## note: this would fail
-```
-"coverageThreshold": {
-  "global": {
-    "branches": 95,
-    "functions": 95,
-    "lines": 95,
-    "statements": 95
-  }
-}
-```
+# complete !
