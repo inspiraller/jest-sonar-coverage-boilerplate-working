@@ -54,3 +54,15 @@ note: it will depend on your sonar-project.properties to work
 
 # make sure sonarqube server is running
 C:\baps\sonar\sonarqube-7.1\bin\windows-x86-32\StartSonar.bat and run terminal as administrator
+
+## note: this would fail
+```
+"coverageThreshold": {
+  "global": {
+    "branches": 95,
+    "functions": 95,
+    "lines": 95,
+    "statements": 95
+  }
+}
+```

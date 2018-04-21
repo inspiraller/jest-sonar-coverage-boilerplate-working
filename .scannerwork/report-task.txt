@@ -1,0 +1,6 @@
+projectKey=experiment
+serverUrl=http://localhost:9000
+serverVersion=7.1.0.11001
+dashboardUrl=http://localhost:9000/dashboard/index/experiment
+ceTaskId=AWLoND2uegg-y9Hw3Pm-
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AWLoND2uegg-y9Hw3Pm-

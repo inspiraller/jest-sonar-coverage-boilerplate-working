@@ -14,7 +14,16 @@
     "jest-sonar-reporter": "^2.0.0"
   },
   "jest": {
-    "testResultsProcessor": "jest-sonar-reporter"
+    "testResultsProcessor": "jest-sonar-reporter",
+    "collectCoverageFrom": [
+      "<rootDir>/src",
+      "**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**",
+      "!**/sonarqube-7.1/**",
+      "!**/coverage/**"
+    ],
+    "collectCoverage": true
   },
   "jestSonar": {
     "reportPath": "reports",
