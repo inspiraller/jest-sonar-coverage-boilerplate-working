@@ -4,8 +4,8 @@ describe("somethingElse", () => {
       expect(somethingElse('me')).toBe('me');
   });
 });
-describe("hello", () => {
-  it("should show hello", () => {
-      expect(hello()).toBe('hello');
-  });
-});
+// describe("hello", () => {
+//   it("should show hello", () => {
+//       expect(hello()).toBe('hello');
+//   });
+// });

@@ -7,7 +7,7 @@
     "test": "node runtests.js --ci --coverage && sonar-scanner",
     "sonar-scanner": "node node_modules/sonar-scanner/bin/sonar-scanner"
   },
-  "author": "",
+  "author": "steve Tomlin",
   "license": "ISC",
   "devDependencies": {
     "jest": "^22.4.3",
@@ -15,7 +15,6 @@
   },
   "jest": {
     "testResultsProcessor": "jest-sonar-reporter",
-    "testRegex": "(\\.(test|spec))\\.(js|jsx)$",
     "collectCoverageFrom": [
       "<rootDir>/src",
       "**/*.{js,jsx}",
@@ -23,11 +22,6 @@
       "!**/vendor/**",
       "!**/sonarqube-7.1/**",
       "!**/coverage/**"
-    ],
-    "collectCoverage": true,
-    "coverageReporters": [
-      "json",
-      "lcov"
     ]
   },
   "jestSonar": {
