@@ -1,10 +1,10 @@
 {
   "name": "sonar",
   "version": "1.0.0",
-  "description": "https://www.sonarqube.org/downloads/\r sonarqub3 7.1",
+  "description": "sonarqube integration with tests and coverage",
   "main": "index.js",
   "scripts": {
-    "test": "node runtests.js --ci && sonar-scanner",
+    "test": "node runtests.js --ci --coverage && sonar-scanner",
     "sonar-scanner": "node node_modules/sonar-scanner/bin/sonar-scanner"
   },
   "author": "",
@@ -24,7 +24,11 @@
       "!**/sonarqube-7.1/**",
       "!**/coverage/**"
     ],
-    "collectCoverage": true
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "lcov"
+    ]
   },
   "jestSonar": {
     "reportPath": "reports",

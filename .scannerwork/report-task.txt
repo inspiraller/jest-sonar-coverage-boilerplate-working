@@ -2,5 +2,5 @@ projectKey=experiment
 serverUrl=http://localhost:9000
 serverVersion=7.1.0.11001
 dashboardUrl=http://localhost:9000/dashboard/index/experiment
-ceTaskId=AWLoOPSmegg-y9Hw3PnA
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AWLoOPSmegg-y9Hw3PnA
+ceTaskId=AWLoPXn8egg-y9Hw3PnE
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AWLoPXn8egg-y9Hw3PnE
