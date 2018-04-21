@@ -7,13 +7,15 @@
 
 ## Download sonarqube server
 https://www.sonarqube.org/downloads/
-sonarqub3 7.1
+- sonarqube 7.1
 
-## Run server - as administrator via cmder or powershell or git bash
+## Run StartSonar.bat to load server
 C:\baps\sonar\sonarqube-7.1\bin\windows-x86-32\StartSonar.bat
 
 ### Troubleshoot cant find server/
-go to java dir and duplicate client/ as server/
+#### go to java dir:
+C:\Program Files (x86)\Java\jre1.8.0_45\bin
+- duplicate client/ as server/
 
 ## open window browser
 localhost:9000
