@@ -1,4 +1,8 @@
 # How to set up sonar
+## pre-requisites:
+- node & npm
+- java
+- cmder or powershell or git bash or equivalent terminal
 
 ## Download sonarqube server
 https://www.sonarqube.org/downloads/
