@@ -15,6 +15,7 @@
   },
   "jest": {
     "testResultsProcessor": "jest-sonar-reporter",
+    "testRegex": "(\\.(test|spec))\\.(js|jsx)$",
     "collectCoverageFrom": [
       "<rootDir>/src",
       "**/*.{js,jsx}",
